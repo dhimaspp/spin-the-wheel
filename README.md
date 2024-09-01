@@ -4,8 +4,7 @@ This project is a Spin-the-Wheel game built using Flutter. The application is de
 
 ## Table of Contents
 1. [Compilation Instructions](#compilation-instructions)
-2. [Running the App](#running-the-app)
-3. [Testing Strategy](#testing-strategy)
+2. [Testing Strategy](#testing-strategy)
 
 ## Compilation Instructions
 
@@ -62,25 +61,25 @@ This project is a Spin-the-Wheel game built using Flutter. The application is de
 
 ## Testing Strategy
 ### Overview
-    The testing strategy for this project includes both unit and functional tests, which are designed to validate individual components and the overall flow of the game. The tests are written to run in both Flutter (for mobile) and the compiled JavaScript (for web) environments, ensuring consistent behavior across platforms.
+The testing strategy for this project includes both unit and functional tests, which are designed to validate individual components and the overall flow of the game. The tests are written to run in both Flutter (for mobile) and the compiled JavaScript (for web) environments, ensuring consistent behavior across platforms.
 
 ### Unit Tests
-    Unit tests are focused on verifying the correctness of individual components and functions. These include:
+Unit tests are focused on verifying the correctness of individual components and functions. These include:
 
-    1.  Spin Mechanism: Tests that the wheel spins correctly, lands on the expected segment, and that the spinning behavior adheres to the parameters set by the controller.
-    2.  Hook Triggers: Verifies that the hooks or indicators are triggered appropriately during the spinning process, ensuring they align correctly with the moving wheel.
-    3.  Dialog Display: Confirms that the correct dialog is displayed when the spin concludes, based on the segment the wheel stops on.
+1.  Spin Mechanism: Tests that the wheel spins correctly, lands on the expected segment, and that the spinning behavior adheres to the parameters set by the controller.
+2.  Hook Triggers: Verifies that the hooks or indicators are triggered appropriately during the spinning process, ensuring they align correctly with the moving wheel.
+3.  Dialog Display: Confirms that the correct dialog is displayed when the spin concludes, based on the segment the wheel stops on.
 
 ### Running Unit Tests
-    To execute unit tests, use the following command:
+To execute unit tests, use the following command:
 
     ```bash
     Copy code
     flutter test
     ```
-    This command runs all tests within the test/ directory.
+This command runs all tests within the test/ directory.
 
-    ### Functional Tests
-    Functional tests are designed to validate the end-to-end flow of the application, ensuring that the game behaves as expected from a user's perspective. This includes:
+### Functional Tests
+Functional tests are designed to validate the end-to-end flow of the application, ensuring that the game behaves as expected from a user's perspective. This includes:
 
-    Game Flow: Tests the complete interaction flow from starting the game, spinning the wheel, and displaying the result. Ensures that all components work together seamlessly.
+Game Flow: Tests the complete interaction flow from starting the game, spinning the wheel, and displaying the result. Ensures that all components work together seamlessly.
