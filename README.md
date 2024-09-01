@@ -60,18 +60,6 @@ This project is a Spin-the-Wheel game built using Flutter. The application is de
     Open a web browser and navigate to http://localhost:8000/index.html to interact with the web version of the app.
     Or you can deploy the contents of `build/web` to any web hosting service.
 
-## Running the App
-
-### Running the App in Flutter
-
-    To run the app in Flutter (mobile):
-```bash
-    flutter run 
-```
-    This command will start the application on your connected device or simulator/emulator.
-
-## Running the Compiled JavaScript Version
-
 ## Testing Strategy
 ### Overview
     The testing strategy for this project includes both unit and functional tests, which are designed to validate individual components and the overall flow of the game. The tests are written to run in both Flutter (for mobile) and the compiled JavaScript (for web) environments, ensuring consistent behavior across platforms.
@@ -86,38 +74,13 @@ This project is a Spin-the-Wheel game built using Flutter. The application is de
 ### Running Unit Tests
     To execute unit tests, use the following command:
 
-```bash
-Copy code
-flutter test
-```
-This command runs all tests within the test/ directory.
+    ```bash
+    Copy code
+    flutter test
+    ```
+    This command runs all tests within the test/ directory.
 
-### Functional Tests
-Functional tests are designed to validate the end-to-end flow of the application, ensuring that the game behaves as expected from a user's perspective. This includes:
+    ### Functional Tests
+    Functional tests are designed to validate the end-to-end flow of the application, ensuring that the game behaves as expected from a user's perspective. This includes:
 
-Game Flow: Tests the complete interaction flow from starting the game, spinning the wheel, and displaying the result. Ensures that all components work together seamlessly.
-Cross-Platform Consistency: Ensures that the app's behavior is consistent across mobile (Flutter) and web (JavaScript) platforms.
-Running Functional Tests
-Functional tests can be run using the same command as unit tests:
-
-bash
-Copy code
-flutter test
-These tests are typically more comprehensive and may include multiple steps to simulate user interactions.
-
-Ensuring Cross-Platform Consistency
-To ensure that your tests run successfully on both Flutter (mobile) and the compiled JavaScript (web) versions:
-
-Run Tests in Flutter:
-
-bash
-Copy code
-flutter test
-This will verify functionality on mobile platforms.
-
-Run Tests in the JavaScript Environment: After compiling the app for web, you can manually run the tests in the browser to ensure the same behavior.
-
-Continuous Integration (Optional)
-For projects using continuous integration (CI), ensure that the CI pipeline includes steps to build the app for both platforms and run the tests as described above. This guarantees that the app remains stable and functional across updates.
-
-If you have any questions or need further assistance, feel free to reach out!
+    Game Flow: Tests the complete interaction flow from starting the game, spinning the wheel, and displaying the result. Ensures that all components work together seamlessly.

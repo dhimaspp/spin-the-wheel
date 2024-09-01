@@ -104,31 +104,35 @@ class _SpinWheelWidgetState extends State<SpinWheelWidget> with TickerProviderSt
             },
           ),
         ),
-        AnimatedBuilder(
-          animation: widget.mySpinController.baseAnimation,
-          builder: (context, child) {
-            double rotationValue = widget.mySpinController.getRotationValue();
-            double limitedRotation = rotationValue % 30;
-            if (limitedRotation > 90 && limitedRotation <= 270) {
-              limitedRotation = 90;
-            } else if (limitedRotation > 270) {
-              limitedRotation = -90;
-            }
-            return Transform.rotate(
-              angle: limitedRotation * math.pi / -180,
-              origin: const Offset(-5, 0),
-              child: Container(
-                padding: const EdgeInsets.all(0),
-                child: const Icon(
-                  Icons.location_on_sharp,
-                  size: 60,
-                  color: Color.fromARGB(255, 5, 155, 155),
-                ),
-              ),
-            );
-          },
-        ),
+        hookTrigger()
       ],
+    );
+  }
+
+  Widget hookTrigger() {
+    return AnimatedBuilder(
+      animation: widget.mySpinController.baseAnimation,
+      builder: (context, child) {
+        double rotationValue = widget.mySpinController.getRotationValue();
+        double limitedRotation = rotationValue % 30;
+        if (limitedRotation > 90 && limitedRotation <= 270) {
+          limitedRotation = 90;
+        } else if (limitedRotation > 270) {
+          limitedRotation = -90;
+        }
+        return Transform.rotate(
+          angle: limitedRotation * math.pi / -180,
+          origin: const Offset(-5, 0),
+          child: Container(
+            padding: const EdgeInsets.all(0),
+            child: const Icon(
+              Icons.location_on_sharp,
+              size: 60,
+              color: Color.fromARGB(255, 5, 155, 155),
+            ),
+          ),
+        );
+      },
     );
   }
 }
